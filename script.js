@@ -89,7 +89,7 @@ arrayObjetos.map((objeto) => {
   li.innerHTML = `
       <a class="link" href="${objeto.url}">
       <img src="assets/${objeto.src}" alt="${objeto.titulo}">   
-      <p> <span id='titulo'>${objeto.titulo}</span>- ${objeto.descricao}<br/>  <span id='categoria'>Categoria(s): ${objeto.categoria}</span>
+      <p> <span id='titulo'>${objeto.titulo}</span>${objeto.descricao}<br/> <span id='categoria'> Categoria: ${objeto.categoria}</span>
       </p></a>
    
     
