@@ -1,0 +1,100 @@
+
+:root {
+    --cor-de-fundo: pink;
+    --cor-do-texto: black;
+    --cor-do-botao: rgb(127, 127, 224);
+    --fonte: sans-serif;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+}
+
+main,header {
+    display: flex;
+   justify-content: center;
+   margin-top: 2em;
+}
+
+.container {
+    max-width: 1500px;
+    display: flex;
+   justify-content: center;
+}
+
+
+#myList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+}
+
+#myList li {
+    padding: 2em;
+    background: var(--cor-de-fundo);
+}
+#myList li a{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1em;
+    text-decoration: none;
+    color: var(--cor-do-texto);
+    font-family: var(--fonte);
+}
+
+#myList li a img {
+    width: 50%;}
+
+#myList li a p {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    
+}
+
+#myList li a p #categoria{
+    background-color: var(--cor-do-botao);
+    color: var(--cor-do-texto);
+    padding: 0.8em;
+    border-radius: 5px;
+    width: fit-content;
+    font-family: var(--fonte);
+
+}
+
+#myList li a p #titulo{
+text-transform: uppercase;
+font-weight: bold;
+font-family: var(--fonte);
+}
+
+span {
+    font-family: var(--fonte);
+}
+
+
+@media screen and (max-width:560px) {
+    #myList li a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 1em;
+        text-decoration: none;
+        color: var(--cor-do-texto);
+        font-family: var(--fonte);
+    }
+    
+}
