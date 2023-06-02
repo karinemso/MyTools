@@ -1,8 +1,9 @@
 
 :root {
-    --cor-de-fundo: pink;
-    --cor-do-texto: black;
-    --cor-do-botao: rgb(127, 127, 224);
+    --cor-de-fundo: #a1189a;
+    --cor-do-texto: white
+    ;
+    --cor-do-botao: #F213B7;
     --fonte: sans-serif;
 }
 
@@ -14,8 +15,10 @@
 }
 
 body {
-    width: 100vw;
+    max-width: 100vw;
     min-height: 100vh;
+    background-color: rgb(233, 177, 235);
+    
 }
 
 main,header {
@@ -24,24 +27,35 @@ main,header {
    margin-top: 2em;
 }
 
+
+
+main {
+    flex-direction: column;
+}
+
 .container {
     max-width: 1500px;
     display: flex;
    justify-content: center;
 }
 
-
+header h1 {
+    font-weight: bold;
+    color: #380836;
+}
 #myList {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 1em;
     width: 100%;
+    padding: 1em;
 }
 
 #myList li {
     padding: 2em;
     background: var(--cor-de-fundo);
+    border-radius: 5px;
 }
 #myList li a{
     display: flex;
@@ -54,7 +68,9 @@ main,header {
 }
 
 #myList li a img {
-    width: 50%;}
+    width: 50%;
+    border-radius: 5px;
+}
 
 #myList li a p {
     width: 70%;
@@ -85,6 +101,22 @@ span {
 }
 
 
+#gpt {
+    text-decoration: none;
+    cursor: pointer;
+    width: fit-content;
+    padding: 1em;
+}
+#gpt button{
+    background-color: var(--cor-do-botao);
+    text-transform: uppercase;
+    border: none;
+    padding: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    color:  var(--cor-do-texto);
+}
+
 @media screen and (max-width:560px) {
     #myList li a{
         display: flex;
@@ -95,6 +127,8 @@ span {
         text-decoration: none;
         color: var(--cor-do-texto);
         font-family: var(--fonte);
+        
     }
     
 }
+
