@@ -18,9 +18,7 @@
 body {
     max-width: 100vw;
     min-height: 100vh;
-    background-image: url('assets/purple-19.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+ background: linear-gradient(rgb(105, 21, 105), rgb(233, 109, 222));
     
 }
 
@@ -167,10 +165,7 @@ span {
 }
 
 #myFavoriteList p {
-
   padding: 0.5em;
-
-   
 }
 
 

@@ -27,7 +27,7 @@ const arrayObjetos = [
     categoria: "CSS",
     descricao:
       "Recursos, dicas e tutoriais sobre CSS, incluindo guias abrangentes, snippets de código e uma ativa comunidade de desenvolvedores.",
-      favorito: true  
+      favorito: false  
   
     },
   {
@@ -38,7 +38,7 @@ const arrayObjetos = [
     categoria: "Compatibilidade",
     descricao:
       "Verifique a compatibilidade de recursos da web em navegadores e dispositivos específicos para garantir uma experiência consistente para os usuários.",
-      favorito: true  
+      favorito: false  
   
     },
   {
@@ -50,7 +50,7 @@ const arrayObjetos = [
     descricao:
       "Explore uma vasta biblioteca de fontes gratuitas e fáceis de usar, que podem ser incorporadas em seus projetos web.",
  
-      favorito: true  
+      favorito: false  
     },
   {
     id: 6,
@@ -69,7 +69,7 @@ const arrayObjetos = [
     categoria: "Documentação",
     descricao:
       "Recursos abrangentes de documentação e referência para tecnologias web, incluindo HTML, CSS e JavaScript.",
-      favorito: true  
+      favorito: false  
   },
   {
     id: 8,
@@ -79,7 +79,7 @@ const arrayObjetos = [
     categoria: "Comunidade",
     descricao:
       "Uma comunidade de desenvolvedores dedicada a perguntas e respostas sobre programação e desenvolvimento web.",
-      favorito: true
+      favorito: false
   },
   {
     id: 9,
@@ -92,6 +92,17 @@ const arrayObjetos = [
       favorito: true,
       
   },
+  {
+    id: 9,
+    titulo: "JS CheatSheet",
+    url: "https://htmlcheatsheet.com/js/",
+    src: "jscheatsheet.png",
+    categoria: "CheatSheet",
+    descricao:
+      "Um grande resumo com funções e tipos de dados",
+      favorito: true,
+      
+  },
 ]
 
 const ul = document.getElementById("myList");
@@ -100,7 +111,7 @@ arrayObjetos.map((objeto) => {
   const li = document.createElement("li");
 
   li.innerHTML = `
-      <a class="link" href="${objeto.url}">
+      <a target="_blank" class="link" href="${objeto.url}">
       <img src="assets/${objeto.src}" alt="${objeto.titulo}">   
       <p> <span id='titulo'>${objeto.titulo}</span>${objeto.descricao}<br/> <span id='categoria'> Categoria: ${objeto.categoria}</span>
       </p></a>
@@ -123,7 +134,7 @@ favoritos.map((favorito)=> {
   const li = document.createElement("li");
 
   li.innerHTML = `
-      <a class="link" href="${favorito.url}"> 
+      <a target="_blank" class="link" href="${favorito.url}"> 
       <p> <span id='tituloFav'>${favorito.titulo}</span>
       </p></a>
    
