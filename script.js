@@ -7,6 +7,7 @@ const arrayObjetos = [
     categoria: "Cores",
     descricao:
       "É uma ferramenta de verificação de contrastes de acordo com as diretrizes da WCAG nas versões 2.0 e 2.1, do World Wide Web Consortium (W3C).",
+    favorito: true  
   },
   {
     id: 2,
@@ -16,7 +17,8 @@ const arrayObjetos = [
     categoria: "Cores",
     descricao:
       "Crie paletas de cores com a roda de cores ou imagem e navegue por milhares de combinações de cores na comunidade do Adobe Color.",
-  },
+      favorito: true
+    },
   {
     id: 3,
     titulo: "CSS-Tricks",
@@ -25,7 +27,9 @@ const arrayObjetos = [
     categoria: "CSS",
     descricao:
       "Recursos, dicas e tutoriais sobre CSS, incluindo guias abrangentes, snippets de código e uma ativa comunidade de desenvolvedores.",
-  },
+      favorito: true  
+  
+    },
   {
     id: 4,
     titulo: "Can I use",
@@ -34,7 +38,9 @@ const arrayObjetos = [
     categoria: "Compatibilidade",
     descricao:
       "Verifique a compatibilidade de recursos da web em navegadores e dispositivos específicos para garantir uma experiência consistente para os usuários.",
-  },
+      favorito: true  
+  
+    },
   {
     id: 5,
     titulo: "Google Fonts",
@@ -43,7 +49,9 @@ const arrayObjetos = [
     categoria: "Tipografia",
     descricao:
       "Explore uma vasta biblioteca de fontes gratuitas e fáceis de usar, que podem ser incorporadas em seus projetos web.",
-  },
+ 
+      favorito: true  
+    },
   {
     id: 6,
     titulo: "CodePen",
@@ -61,6 +69,7 @@ const arrayObjetos = [
     categoria: "Documentação",
     descricao:
       "Recursos abrangentes de documentação e referência para tecnologias web, incluindo HTML, CSS e JavaScript.",
+      favorito: true  
   },
   {
     id: 8,
@@ -70,6 +79,7 @@ const arrayObjetos = [
     categoria: "Comunidade",
     descricao:
       "Uma comunidade de desenvolvedores dedicada a perguntas e respostas sobre programação e desenvolvimento web.",
+      favorito: true
   },
   {
     id: 9,
@@ -79,7 +89,10 @@ const arrayObjetos = [
     categoria: "Inspiração",
     descricao:
       "Um prêmio que reconhece o talento e a criatividade em design de sites, com uma coleção de designs",
-  }]
+      favorito: true,
+      
+  },
+]
 
 const ul = document.getElementById("myList");
 
@@ -99,3 +112,24 @@ arrayObjetos.map((objeto) => {
 });
 
 
+
+const ulFav = document.getElementById("myFavoriteList");
+
+let favoritos = arrayObjetos.filter(site => site.favorito === true)
+
+console.log(favoritos)
+
+favoritos.map((favorito)=> {
+  const li = document.createElement("li");
+
+  li.innerHTML = `
+      <a class="link" href="${favorito.url}"> 
+      <p> <span id='tituloFav'>${favorito.titulo}</span>
+      </p></a>
+   
+    
+    `;
+
+  ulFav.appendChild(li);
+
+})
