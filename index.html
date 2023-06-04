@@ -6,6 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>MyTools</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <style>
+      
+    
+        .swiper {
+          width: 50vw;
+          height: 100%;
+        }
+    
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #ffffff00;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .swiper-button-next, .swiper-button-prev {
+            color: #ffffff3b;
+        }
+
+        
+      </style>
 </head>
 <body>
     <header>
@@ -17,11 +48,26 @@
         <a id= 'gpt' href="https://chat.openai.com/" target="_blank"><button>Eu tenho uma dúvida</button></a>
         <div class="container">
             
-            <div class="videos">
-                 <iframe width="50%" height="305" src="https://www.youtube.com/embed/jfKfPfyJRdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-               <iframe width="50%" height="305" src="https://www.youtube.com/embed/IPkMEbxhA8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-               <iframe width="50%" height="305" src="https://www.youtube.com/embed/b3TOVBNSJDA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
+       <div class="videos">
+        
+       </div>
+
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><iframe width="50%" height="305" src="https://www.youtube.com/embed/jfKfPfyJRdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                  <div class="swiper-slide"><iframe width="50%" height="305" src="https://www.youtube.com/embed/IPkMEbxhA8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                  <div class="swiper-slide"><iframe width="50%" height="305" src="https://www.youtube.com/embed/b3TOVBNSJDA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                  <div class="swiper-slide">Nenhuma playlist aqui ainda</div>
+                  <div class="swiper-slide">Nenhuma playlist aqui ainda</div>
+                  <div class="swiper-slide">Nenhuma playlist aqui ainda</div>
+                  <div class="swiper-slide">Nenhuma playlist aqui ainda</div>
+                  <div class="swiper-slide">Nenhuma playlist aqui ainda</div>
+                  <div class="swiper-slide">Nenhuma playlist aqui ainda</div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+          
               
         </div>
         <div class="container">
@@ -32,5 +78,17 @@
         </div> 
     </main>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+   
 </body>
 </html>

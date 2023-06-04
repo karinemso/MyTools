@@ -27,7 +27,7 @@ const arrayObjetos = [
     categoria: "CSS",
     descricao:
       "Recursos, dicas e tutoriais sobre CSS, incluindo guias abrangentes, snippets de código e uma ativa comunidade de desenvolvedores.",
-      favorito: false  
+      favorito: true  
   
     },
   {
@@ -38,7 +38,7 @@ const arrayObjetos = [
     categoria: "Compatibilidade",
     descricao:
       "Verifique a compatibilidade de recursos da web em navegadores e dispositivos específicos para garantir uma experiência consistente para os usuários.",
-      favorito: false  
+      favorito: true  
   
     },
   {
@@ -50,7 +50,7 @@ const arrayObjetos = [
     descricao:
       "Explore uma vasta biblioteca de fontes gratuitas e fáceis de usar, que podem ser incorporadas em seus projetos web.",
  
-      favorito: false  
+      favorito:true  
     },
   {
     id: 6,
@@ -69,7 +69,7 @@ const arrayObjetos = [
     categoria: "Documentação",
     descricao:
       "Recursos abrangentes de documentação e referência para tecnologias web, incluindo HTML, CSS e JavaScript.",
-      favorito: false  
+      favorito: true
   },
   {
     id: 8,
@@ -79,7 +79,7 @@ const arrayObjetos = [
     categoria: "Comunidade",
     descricao:
       "Uma comunidade de desenvolvedores dedicada a perguntas e respostas sobre programação e desenvolvimento web.",
-      favorito: false
+      favorito: true
   },
   {
     id: 9,
@@ -144,3 +144,5 @@ favoritos.map((favorito)=> {
   ulFav.appendChild(li);
 
 })
+
+
