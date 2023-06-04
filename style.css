@@ -153,16 +153,20 @@ span {
     padding: 1em;
 }
 
+#myFavoriteList li {
+    flex: 1;
+}
+
 #myFavoriteList li a{
     display: flex;
     text-decoration: none;
     color: var(--cor-de-fundo);
     font-size: 2em;
- align-items: center;
+    align-items: center;
     justify-content: center;
     background-color: rgb(233, 232, 232);
     height: 100%;
-  border-radius: 5px;
+    border-radius: 5px;
 }
 
 #myFavoriteList p {
@@ -228,10 +232,8 @@ span {
 }
 
 #myFavoriteList p {
- 
     padding: 0.7em;
     border-radius: 5px;
-
 }
 
 
