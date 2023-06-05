@@ -146,3 +146,20 @@ favoritos.map((favorito)=> {
 })
 
 
+fetch('https://api.adviceslip.com/advice')
+  .then(response => response.json())
+  .then(data => {
+    const advice = data.slip.advice;
+    console.log(`Conselho: ${advice}`);
+    let divAdvice = document.querySelector('#advice')
+const h2 = document.createElement("h2");
+
+h2.innerText = `"${advice}"`;
+
+divAdvice.appendChild(h2);
+  })
+  .catch(error => {
+    console.log('Não foi possível obter um conselho neste momento.', error);
+  });
+
+
