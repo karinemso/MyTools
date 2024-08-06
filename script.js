@@ -112,9 +112,11 @@ arrayObjetos.map((objeto) => {
 
   li.innerHTML = `
       <a target="_blank" class="link" href="${objeto.url}">
-      <img src="assets/${objeto.src}" alt="${objeto.titulo}">   
-      <p> <span id='titulo'>${objeto.titulo}</span>${objeto.descricao}<br/> <span id='categoria'> Categoria: ${objeto.categoria}</span>
-      </p></a>
+
+      <p> <span id='titulo'>${objeto.titulo}</span>       <span id='categoria'> ${objeto.categoria}</span>
+      </p>
+      <p> ${objeto.descricao}<br/> </p>
+      </a>
    
     
     `;

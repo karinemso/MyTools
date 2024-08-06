@@ -1,14 +1,14 @@
-
 :root {
-    --cor-de-fundo: #a1189a;
-    --cor-do-texto: white
-    ;
-    --cor-do-botao: #F213B7;
+    --cor-de-fundo: #230c33;
+    --cor-do-texto: #ffffff;
+    --cor-do-botao: #c01c9c;
+
+    --cor-componentes: rgb(111, 111, 197);
     --fonte: sans-serif;
 }
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -18,48 +18,58 @@
 body {
     max-width: 100vw;
     min-height: 100vh;
- background: linear-gradient(rgb(43, 6, 92), rgb(139, 21, 110));
-    
+    background: var(--cor-de-fundo)
 }
 
 header {
     display: flex;
-   justify-content: center;
-   margin-top: 2em;
+    justify-content: center;
+    margin-top: 2em;
 }
 
+
+header .spaceHeader{
+ display: flex;
+ justify-content: space-between;
+ width: 100%;
+ align-items: center;
+ padding: 0em 1em;
+}
 
 
 main {
     display: flex;
     justify-content: center;
     flex-direction: column;
-     width: 100%;
-     align-items: center;
-     gap: 0.5em;
+    width: 100%;
+    align-items: center;
+    gap: 0.5em;
 }
 
 .container {
-    
+
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-self: center;
-   justify-content: center;
-   max-width: 1500px;
+    justify-content: center;
+    max-width: 1440px;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 
 
 .videos {
-   
+
 
     align-items: center;
     justify-content: center;
     flex: 1;
-    background-color: #8c0d7c;
-    padding: 2em;
+    background-color: var(--cor-componentes);
+    padding: 1em;
     border-radius: 5px;
-    width: 80%;
+    width: 100%;
 }
 
 .videos iframe {
@@ -68,16 +78,16 @@ main {
 
 }
 
-#videosAdvice{
-    
-    align-items: center;
+#videosAdvice {
+display: flex;
+flex-direction: row;
+    align-items: stretch;
     gap: 1em;
     padding: 1em;
-    width: 80vw;
     justify-content: space-between;
-   
+    min-height: 30vh;
     width: 100%;
-
+    flex-wrap: wrap;
 }
 
 #videosAdvice #advice {
@@ -85,14 +95,16 @@ main {
     font-size: 0.8em;
     color: #ffffff;
     text-align: center;
-    background-color: #8c0d7c;
+    background-color: var(--cor-componentes);
     border-radius: 5px;
     padding: 1em;
     display: flex;
+    flex: .5;
     align-items: center;
+
 }
 
-header h1{
+header h1 {
     font-weight: bold;
     color: #ffffff;
     text-align: center;
@@ -100,34 +112,39 @@ header h1{
 
 
 header .container {
-    
+
     align-items: center;
     justify-content: space-between;
-  
+
 }
+
 #myList {
     list-style: none;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1em;
     width: 100%;
+    max-width: 1440px;
     padding: 1em;
 
 }
 
 #myList li {
-    padding: 2em;
-    background: #a1189ab9;
+    padding: 1.2em;
+    background: var(--cor-componentes);
     border-radius: 5px;
 }
-#myList li a{
+
+#myList li a {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-around;
     gap: 1em;
     text-decoration: none;
     color: var(--cor-do-texto);
     font-family: var(--fonte);
+    cursor: pointer;
+    flex-direction: column;
 }
 
 #myList li a img {
@@ -138,27 +155,32 @@ header .container {
 #myList li a p {
     width: 70%;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     gap: 1em;
-  
-    
+    flex-wrap: wrap;
+    white-space: wrap;
+
+
 }
 
-#myList li a p #categoria{
+#myList li a p #categoria {
     background-color: var(--cor-do-botao);
     color: var(--cor-do-texto);
-    padding: 0.8em;
+    padding: 0.4em;
+    font-size: .8em;
     border-radius: 5px;
     width: fit-content;
     font-family: var(--fonte);
-    
+    display: inline-block;
+
 
 }
 
-#myList li a p #titulo{
-text-transform: uppercase;
-font-weight: bold;
-font-family: var(--fonte);
+#myList li a p #titulo {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: var(--fonte);
+    display: inline-block;
 }
 
 span {
@@ -172,14 +194,15 @@ span {
     width: fit-content;
     padding: 1em;
 }
-#gpt button{
+
+#gpt button {
     background-color: var(--cor-do-botao);
     text-transform: uppercase;
     border: none;
     padding: 1em;
     border-radius: 5px;
     cursor: pointer;
-    color:  var(--cor-do-texto);
+    color: var(--cor-do-texto);
 }
 
 #myFavoriteList {
@@ -187,19 +210,21 @@ span {
     display: flex;
     gap: 1em;
     overflow-x: scroll;
-    max-width: 80vw;
-    padding: 1em;
+    width: 100vw;
+    max-width: 1440px;
+    padding: 1em ;
+
 }
 
 #myFavoriteList li {
     flex: 1;
 }
 
-#myFavoriteList li a{
+#myFavoriteList li a {
     display: flex;
     text-decoration: none;
     color: var(--cor-de-fundo);
-    font-size: 2em;
+    font-size: 1.2em;
     align-items: center;
     justify-content: center;
     background-color: rgb(233, 232, 232);
@@ -208,52 +233,55 @@ span {
 }
 
 #myFavoriteList p {
-  padding: 0.5em;
+    padding: 0.5em;
 }
 
 
 
-@media screen and (max-width:1080px){
-    #myList li a{
-   flex-direction: column;
-}
-    #myList li a img{
-   width: 100%;
-   max-height: 150px;
-}
-}
+@media screen and (max-width:1080px) {
+    #myList li a {
+        flex-direction: column;
+    }
 
-
-@media screen and (max-width:700px){
-  #myList {
-    grid-template-columns: 1fr ;
+    #myList li a img {
+        width: 100%;
+        max-height: 150px;
+    }
 }
 
 
+@media screen and (max-width:700px) {
+    #myList {
+        grid-template-columns: 1fr;
+    }
 
-#videosAdvice{
-    
-    align-items: center;
-    gap: 1em;
-    padding: 1em;
-    width: 80vw;
-    justify-content: space-between;
-}
 
-#videosAdvice #advice {
-    width: unset;
-    padding: 1em;
-    word-wrap: break-word;
-}
 
-.videos {
-    width: 100%;
-}
+    #videosAdvice {
+
+        align-items: center;
+        gap: 1em;
+        padding: 1em;
+        width: 100vw;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    #videosAdvice #advice {
+        width: unset;
+        padding: 1em;
+        word-wrap: break-word;
+    }
+
+    .videos {
+        width: 100%;
+    }
 }
 
 
 @media screen and (max-width:560px) {
-    #myList li a{
+    #myList li a {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -262,54 +290,68 @@ span {
         text-decoration: none;
         color: var(--cor-do-texto);
         font-family: var(--fonte);
-        
+
     }
 
-    
-#myFavoriteList {
-    list-style: none;
-    display: flex;
-    gap: 1em;
-    overflow-x: scroll;
-    max-width: 80vw;
+
+    #myFavoriteList {
+        list-style: none;
+        display: flex;
+        gap: 1em;
+        overflow-x: scroll;
+        max-width: 100vw;
+    }
+
+    #myFavoriteList li a {
+
+        text-decoration: none;
+        color: var(--cor-de-fundo);
+        font-size: 1em;
+
+
+    }
+
+    #myFavoriteList p {
+        padding: 0.7em;
+        border-radius: 5px;
+    }
+
+
+
+
 }
 
-#myFavoriteList li a{
+#myFavoriteList::-webkit-scrollbar {
+    height: 2px;
+    padding: 1em;
+    /* Largura da scrollbar */
+}
+#myFavoriteList::-webkit-scrollbar {
+    width: 1px;
 
-    text-decoration: none;
-    color: var(--cor-de-fundo);
-    font-size: 1em;
-
-
+    /* Largura da scrollbar */
 }
 
-#myFavoriteList p {
-    padding: 0.7em;
-    border-radius: 5px;
-}
-
-
-
-    
-}
-
-#myFavoriteList ::-webkit-scrollbar {
-    height: 5px; /* Largura da scrollbar */
-  }
 
 ::-webkit-scrollbar {
-    width: 5px; /* Largura da scrollbar */
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: #f1f1f100; /* Cor de fundo da scrollbar */
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: #a1189a; /* Cor da thumb (alça da scrollbar) */
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #8c0d7c; /* Cor da thumb quando hover */
+    width: 2px;
+    padding: 1em;
+    /* Largura da scrollbar */
+}    
+
+::-webkit-scrollbar-track {
+    background: #f1f1f100;
+    /* Cor de fundo da scrollbar */
+}    
+
+::-webkit-scrollbar-thumb {
+    background: var(--cor-componentes);
+    padding: 1em;
+    /* Cor da thumb (alça da scrollbar) */
+}    
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--cor-componentes);
+    /* Cor da thumb quando hover */
     border-radius: 3px
-  }
+}    
