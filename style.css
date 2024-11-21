@@ -1,357 +1,430 @@
 :root {
-    --cor-de-fundo: #230c33;
-    --cor-do-texto: #ffffff;
-    --cor-do-botao: #c01c9c;
+	--cor-de-fundo: #230c33;
+	--cor-do-texto: #ffffff;
+	--cor-do-botao: #c01c9c;
 
-    --cor-componentes: rgb(111, 111, 197);
-    --fonte: sans-serif;
+	--cor-componentes: rgb(111, 111, 197);
+	--fonte: sans-serif;
 }
 
-
 * {
-    margin: 0;
-    padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	box-sizing: border-box;
 }
 
 body {
-    max-width: 100vw;
-    min-height: 100vh;
-    background: var(--cor-de-fundo)
+	max-width: 100vw;
+	min-height: 100vh;
+	background: var(--cor-de-fundo);
+    background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+
 }
 
 header {
-    display: flex;
-    justify-content: center;
-    margin-top: 2em;
+	display: flex;
+	justify-content: center;
+	margin-top: 2em;
 }
 
-
-header .spaceHeader{
- display: flex;
- justify-content: space-between;
- width: 100%;
- align-items: center;
- padding: 0em 1em;
+header .spaceHeader {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	align-items: center;
+	padding: 0em 1em;
 }
-
 
 main {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    gap: 0.5em;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
+	gap: 0.5em;
 }
 
 .container {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-self: center;
-    justify-content: center;
-    max-width: 1440px;
-    width: 100%;
-    flex-wrap: wrap;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-self: center;
+	justify-content: center;
+	max-width: 1200px;
+	width: 100%;
+	flex-wrap: wrap;
+}
+.container-row {
+	display: flex;
+	max-width: 1200px;
+    padding: 1em;
+    padding-top: 0em;
+    gap: 1em;
+	
+	
 }
 
+.myNotes textarea{
+    height: 200px;
+    resize: none;
+    width: 100%;
+    background-color: var(--cor-de-fundo);
+    padding: 1em;
+    color: var(--cor-do-texto);
+    border: 1px solid var(--cor-componentes);
+}
 
+.column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 50%;
+    gap: 1em;
+}
 
 .videos {
-
-
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    background-color: var(--cor-componentes);
-    padding: 1em;
-    border-radius: 5px;
-    width: 100%;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+	background-color: var(--cor-componentes);
+	padding: 1em;
+	border-radius: 5px;
+	width: 100%;
 }
 
 .videos iframe {
-    flex: 1;
-    border-radius: 10px;
-
+	flex: 1;
+	border-radius: 10px;
 }
 
 #videosAdvice {
-display: flex;
-flex-direction: row;
-    align-items: stretch;
-    gap: 1em;
-    padding: 1em;
-    justify-content: space-between;
-    min-height: 30vh;
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	gap: 1em;
+	padding: 1em;
+	justify-content: space-between;
+	min-height: 30vh;
+	width: 100%;
+	flex-wrap: wrap;
+}
+
+#videosAdvice .mainActions {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex: 0.5;
+	align-items: center;
+	gap: 1em;
     width: 100%;
-    flex-wrap: wrap;
+}
+#videosAdvice .mainActions .mood {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--cor-componentes);
+	flex: 0.5;
+	padding: 1em;
+	gap: 1em;
+	border-radius: 5px;
+	width: 100%;
+    
+}
+
+
+#videosAdvice .mainActions .mood button {
+	padding: 1em;
+	border-radius: 5px;
+	flex: 1;
 }
 
 #videosAdvice #advice {
-    width: 30vw;
-    font-size: 0.8em;
-    color: #ffffff;
-    text-align: center;
-    background-color: var(--cor-componentes);
-    border-radius: 5px;
-    padding: 1em;
-    display: flex;
-    flex: .5;
-    align-items: center;
+	width: 100%;
+	font-size: 0.8em;
+	color: #ffffff;
+	text-align: center;
+	background-color: var(--cor-componentes);
+	border-radius: 5px;
+	padding: 1em;
+	display: flex;
+	flex: 1;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+    cursor: pointer;
+}
 
+#videosAdvice #advice #getAdvice:hover {
+	background-color: var(--cor-do-botao);
+	color: var(--cor-do-texto);
+}
+#videosAdvice #advice #adviceText {
+	font-size: 1.2em;
+	font-weight: bold;
 }
 
 header h1 {
-    font-weight: bold;
-    color: #ffffff;
-    text-align: center;
+	font-weight: bold;
+	color: #ffffff;
+	text-align: center;
 }
 
-
 header .container {
-
-    align-items: center;
-    justify-content: space-between;
-
+	align-items: center;
+	justify-content: space-between;
 }
 
 #myList {
-    list-style: none;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1em;
-    width: 100%;
-    max-width: 1440px;
-    padding: 1em;
-
+	list-style: none;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1em;
+	padding: 0 1em;
+    max-height: 35vh;
+    overflow-y: auto;
 }
 
 #myList li {
-    padding: 1.2em;
-    background: var(--cor-componentes);
-    border-radius: 5px;
+	padding: 1.2em;
+	background: var(--cor-componentes);
+	border-radius: 5px;
 }
 
 #myList li a {
-    display: flex;
-    align-items: start;
-    justify-content: space-around;
-    gap: 1em;
-    text-decoration: none;
-    color: var(--cor-do-texto);
-    font-family: var(--fonte);
-    cursor: pointer;
-    flex-direction: column;
+	display: flex;
+	align-items: start;
+	justify-content: space-around;
+	gap: 1em;
+	text-decoration: none;
+	color: var(--cor-do-texto);
+	font-family: var(--fonte);
+	cursor: pointer;
+	flex-direction: column;
 }
 
-#myList li a img {
-    width: 50%;
-    border-radius: 5px;
-}
 
 #myList li a p {
-    width: 70%;
-    display: flex;
-    align-items: center;
-    gap: 1em;
-    flex-wrap: wrap;
-    white-space: wrap;
 
-
+	display: flex;
+	align-items: center;
+	gap: 1em;
+	flex-wrap: wrap;
+	white-space: wrap;
 }
 
 #myList li a p #categoria {
-    background-color: var(--cor-do-botao);
-    color: var(--cor-do-texto);
-    padding: 0.4em;
-    font-size: .8em;
-    border-radius: 5px;
-    width: fit-content;
-    font-family: var(--fonte);
-    display: inline-block;
-
-
+	background-color: var(--cor-do-botao);
+	color: var(--cor-do-texto);
+	padding: 0.4em;
+	font-size: 0.8em;
+	border-radius: 5px;
+	width: fit-content;
+	font-family: var(--fonte);
+	display: inline-block;
 }
 
 #myList li a p #titulo {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-family: var(--fonte);
-    display: inline-block;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: var(--fonte);
+	display: inline-block;
 }
 
 span {
-    font-family: var(--fonte);
+	font-family: var(--fonte);
 }
 
-
 #gpt {
-    text-decoration: none;
-    cursor: pointer;
-    width: fit-content;
-    padding: 1em;
+	text-decoration: none;
+	cursor: pointer;
+	width: fit-content;
+	padding: 1em;
 }
 
 #gpt button {
-    background-color: var(--cor-do-botao);
-    text-transform: uppercase;
-    border: none;
-    padding: 1em;
-    border-radius: 5px;
-    cursor: pointer;
-    color: var(--cor-do-texto);
+	background-color: var(--cor-do-botao);
+	text-transform: uppercase;
+	border: none;
+	padding: 1em;
+	border-radius: 5px;
+	cursor: pointer;
+	color: var(--cor-do-texto);
 }
 
 #myFavoriteList {
-    list-style: none;
-    display: flex;
-    gap: 1em;
-    overflow-x: scroll;
-    width: 100vw;
-    max-width: 1440px;
-    padding: 1em ;
-
+	list-style: none;
+	display: flex;
+	gap: 1em;
+	overflow-x: scroll;
+	padding: 0 1em;
 }
 
 #myFavoriteList li {
-    flex: 1;
+	flex: 1;
 }
 
 #myFavoriteList li a {
-    display: flex;
+	display: flex;
+	text-decoration: none;
+	color: var(--cor-de-fundo);
+	font-size: 1.2em;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(233, 232, 232);
+	height: 100%;
+	border-radius: 5px;
+}
+
+
+.todoList {
+    padding: 1em;
+    background-color: var(--cor-componentes);
+    color: var(--cor-do-texto);
+  
+    height: 200px;
+
+    
+}
+
+.todoList .listItem {
+    padding: 1em;
+    background-color: var(--cor-de-fundo);
+    list-style: none;
     text-decoration: none;
-    color: var(--cor-de-fundo);
-    font-size: 1.2em;
+    overflow-x: auto;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    background-color: rgb(233, 232, 232);
-    height: 100%;
-    border-radius: 5px;
+    white-space: nowrap;
+}
+.todoList ul {
+    overflow-y: auto;
+    max-height: 80%;
 }
 
 #myFavoriteList p {
-    padding: 0.5em;
+	padding: 0.5em;
 }
 
-
-
-@media screen and (max-width:1080px) {
-    #myList li a {
-        flex-direction: column;
-    }
-
-    #myList li a img {
-        width: 100%;
-        max-height: 150px;
-    }
+.flex{
+    display: flex;
 }
 
-
-@media screen and (max-width:700px) {
-    #myList {
-        grid-template-columns: 1fr;
-    }
-
-
-
-    #videosAdvice {
-
-        align-items: center;
-        gap: 1em;
-        padding: 1em;
-        width: 100vw;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-
-    #videosAdvice #advice {
-        width: unset;
-        padding: 1em;
-        word-wrap: break-word;
-    }
-
-    .videos {
-        width: 100%;
-    }
+.gap-1 {
+    gap: 1em;
 }
 
+#secondPart {
+    flex-direction: row;
+}
 
-@media screen and (max-width:560px) {
-    #myList li a {
-        display: flex;
+@media screen and (max-width: 1080px) {
+	#myList li a {
+		flex-direction: column;
+	}
+
+	#myList li a img {
+		width: 100%;
+		max-height: 150px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+
+    #videosAdvice .mainActions .mood {
         flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        gap: 1em;
-        text-decoration: none;
-        color: var(--cor-do-texto);
-        font-family: var(--fonte);
-
+        
     }
+    
+	#myList {
+		grid-template-columns: 1fr;
+	}
 
+	#videosAdvice {
+		align-items: center;
+		gap: 1em;
+		padding: 1em;
+		width: 100vw;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
 
-    #myFavoriteList {
-        list-style: none;
-        display: flex;
-        gap: 1em;
-        overflow-x: scroll;
-        max-width: 100vw;
-    }
+	#videosAdvice #advice {
+		width: unset;
+		padding: 1em;
+		word-wrap: break-word;
+	}
 
-    #myFavoriteList li a {
+	.videos {
+		width: 100%;
+	}
+}
 
-        text-decoration: none;
-        color: var(--cor-de-fundo);
-        font-size: 1em;
+@media screen and (max-width: 560px) {
+	#myList li a {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		gap: 1em;
+		text-decoration: none;
+		color: var(--cor-do-texto);
+		font-family: var(--fonte);
+	}
 
+	#myFavoriteList {
+		list-style: none;
+		display: flex;
+		gap: 1em;
+		overflow-x: scroll;
+		max-width: 100vw;
+	}
 
-    }
+	#myFavoriteList li a {
+		text-decoration: none;
+		color: var(--cor-de-fundo);
+		font-size: 1em;
+	}
 
-    #myFavoriteList p {
-        padding: 0.7em;
-        border-radius: 5px;
-    }
-
-
-
-
+	#myFavoriteList p {
+		padding: 0.7em;
+		border-radius: 5px;
+	}
 }
 
 #myFavoriteList::-webkit-scrollbar {
-    height: 2px;
-    padding: 1em;
-    /* Largura da scrollbar */
+	height: 2px;
+	padding: 1em;
+	/* Largura da scrollbar */
 }
 #myFavoriteList::-webkit-scrollbar {
-    width: 1px;
+	width: 1px;
 
-    /* Largura da scrollbar */
+	/* Largura da scrollbar */
 }
-
 
 ::-webkit-scrollbar {
-    width: 2px;
-    padding: 1em;
-    /* Largura da scrollbar */
-}    
+	width: 2px;
+	padding: 1em;
+	/* Largura da scrollbar */
+}
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f100;
-    /* Cor de fundo da scrollbar */
-}    
+	background: #f1f1f100;
+	/* Cor de fundo da scrollbar */
+}
 
 ::-webkit-scrollbar-thumb {
-    background: var(--cor-componentes);
-    padding: 1em;
-    /* Cor da thumb (alça da scrollbar) */
-}    
+	background: var(--cor-componentes);
+	padding: 1em;
+	/* Cor da thumb (alça da scrollbar) */
+}
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--cor-componentes);
-    /* Cor da thumb quando hover */
-    border-radius: 3px
-}    
+	background: var(--cor-componentes);
+	/* Cor da thumb quando hover */
+	border-radius: 3px;
+}

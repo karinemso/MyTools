@@ -1,58 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="assets/tools.png" type="image/x-icon">
-    <title>MyTools</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+		<link
+			rel="stylesheet"
+			href="style.css" />
+		<link
+			rel="shortcut icon"
+			href="assets/tools.png"
+			type="image/x-icon" />
+		<title>MyTools</title>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="spaceHeader">
+					<h1>TOOLSKA</h1>
+					<a
+						id="gpt"
+						href="https://chat.openai.com/"
+						target="_blank"
+						><button>Eu tenho uma dúvida</button></a
+					>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div
+				class="container"
+				id="videosAdvice">
+				<div class="mainActions">
+					<div class="mood">
+						<!--Dayspedia.com widget--><iframe
+							width="243"
+							height="163"
+							style="
+								padding: 0 !important;
+								margin: 0 !important;
+								border: none !important;
+								background: none !important;
+								background: transparent !important;
+							"
+							marginheight="0"
+							marginwidth="0"
+							frameborder="0"
+							scrolling="no"
+							comment="/*defined*/"
+							src="https://dayspedia.com/if/digit/?v=1&iframe=eyJ3LTEyIjp0cnVlLCJ3LTExIjp0cnVlLCJ3LTEzIjp0cnVlLCJ3LTE0IjpmYWxzZSwidy0xNSI6ZmFsc2UsInctMTEwIjpmYWxzZSwidy13aWR0aC0wIjp0cnVlLCJ3LXdpZHRoLTEiOmZhbHNlLCJ3LXdpZHRoLTIiOmZhbHNlLCJ3LTE2IjoiMjRweCIsInctMTkiOiI0OCIsInctMTciOiIxNiIsInctMjEiOmZhbHNlLCJiZ2ltYWdlIjotMSwiYmdpbWFnZVNldCI6ZmFsc2UsInctMjFjMCI6IiNmZmZmZmYiLCJ3LTAiOnRydWUsInctMyI6ZmFsc2UsInctM2MwIjoiIzM0MzQzNCIsInctM2IwIjoiMSIsInctNiI6IiMzNDM0MzQiLCJ3LTIwIjp0cnVlLCJ3LTQiOiIjMDAwMDAwIiwidy0xOCI6ZmFsc2UsInctd2lkdGgtMmMtMCI6IjMwMCIsInctMTE1IjpmYWxzZX0=&lang=pt&cityid=5510"></iframe
+						><!--Dayspedia.com widget ENDS-->
 
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="spaceHeader">
+						<div class="flex gap-1">
+							<button
+								type="button"
+								data-name="code"
+								onclick="getTheme(event, false)">
+								code
+							</button>
+							<button
+								type="button"
+								data-name="relax"
+								onclick="getTheme(event, false)">
+								relax
+							</button>
+							<button
+								type="button"
+								data-name="focus"
+								onclick="getTheme(event, false)">
+								focus
+							</button>
+						</div>
+					</div>
 
-                <h1>MY TOOLS</h1>
-                <a id= 'gpt' href="https://chat.openai.com/" target="_blank"><button>Eu tenho uma dúvida</button></a>
+					<div
+						id="advice"
+						onclick="getAdvice(event)">
+						<p id="adviceText"></p>
+					</div>
+				</div>
 
-            </div>
-        </div>
-    </header>
-    <main>
-       
-        <div class="container" id="videosAdvice">
-        
+				<div class="videos">
+					<iframe
+						width="100%"
+						height="305"
+						src="https://www.youtube.com/embed/videoseries?list=PL7a_JX0Po9J4EbV0xDelqL7dpNPWRsksl"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						allowfullscreen></iframe>
+				</div>
+			</div>
 
+			<div class="container-row" >
 
-           <div id='advice'>
-            
-           </div>
+                <div class="column">
 
-            
-            
+                    <!-- <div class="todoList">
+                        <input type="text" id="taskInput" >
+                        <button onclick="addTask(event)">Adicionar tarefa</button>
+                        <ul id="taskList">
+                        
+                        </ul>
+                    </div> -->
+    
+                    <div class="myNotes">
+                        <textarea name="" id="" >Tem passado algo na sua mente?</textarea>
+                    </div>
 
-              <div class="videos">
-              
-                <iframe width="100%" height="305" src="https://www.youtube.com/embed/videoseries?list=PL7a_JX0Po9J4EbV0xDelqL7dpNPWRsksl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-              
-                
-              </div>
-          
-              
-        </div>
-        <div class="container">
-            <ul id="myFavoriteList"></ul>
-       </div> 
-        <div class="container">
-             <ul id="myList"></ul>
-        </div> 
-    </main>
-    <script src="script.js"></script>
+                </div>
 
+                <div class="column">
+                   
+                    <ul id="myList"></ul>
 
-   
-</body>
+                </div>
+			</div>
+			<div class="container">
+			</div>
+		</main>
+		<script src="script.js"></script>
+	</body>
 </html>
